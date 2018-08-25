@@ -13,8 +13,6 @@ import { AppButton } from './UI.js';
 
 let SQLite = require('react-native-sqlite-storage');
 
-
-
 class HomeScreen extends Component {
 
     static navigationOptions ={
