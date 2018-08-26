@@ -46,21 +46,12 @@ const stackNav = createStackNavigator({
   }, 
   Search: {
     screen: SearchScreen,
-    navigationOptions: ({navigation}) => ({
-      title: "Search",
-    })
   },
   CategoryShopList: {
     screen: CategoryScreen,
-    navigationOptions: ({navigation}) => ({
-      title: "Category",
-    })
   },
   ShopDetail: {
     screen: ShopDetailsScreen,
-    navigationOptions: ({navigation}) => ({
-      title: "Shop Detail",
-    })
   },
 });
 

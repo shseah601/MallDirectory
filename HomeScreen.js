@@ -24,6 +24,7 @@ class HomeScreen extends Component {
 
         this.state ={
             categories: [],
+            keyword: "",
         };
 
         this._query = this._query.bind(this);
@@ -62,11 +63,16 @@ class HomeScreen extends Component {
             <TextInput
                 style={styles.input}
                 placeholder={'Enter Shop Name Here...'}
+                onChangeText= {(keyword)=> {
+                    this.setState({keyword})
+                }}
             >
             </TextInput>
             <Button style={styles.search}
                 title={'Search'}
-                onPress={() => this.props.navigation.navigate("Search")}
+                onPress={() => this.props.navigation.navigate("Search", {
+                    keyword: this.state.keyword,
+                })}
             />
         </View>
         <View>
@@ -79,7 +85,11 @@ class HomeScreen extends Component {
                 renderItem = {({item})=>
                 <TouchableHighlight
                     underlayColor={'#cccccc'}
-                    onPress={() => this.props.navigation.navigate('CategoryShopList')}
+                    onPress={() => {
+                        this.props.navigation.navigate('CategoryShopList', {
+                        category: item.category,
+                        })
+                    }}
                 >
 
                 <View style={styles.item}>
