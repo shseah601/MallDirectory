@@ -18,9 +18,6 @@ class SideMenu extends Component {
         <ScrollView>
           <View>
             <View style={styles.navSectionStyle}>
-            <Text style={styles.navItemStyle} onPress={this.navigateToScreen('User')}>
-              User
-              </Text>
               <Text style={styles.navItemStyle} onPress={this.navigateToScreen('Home')}>
               Home
               </Text>
@@ -32,6 +29,9 @@ class SideMenu extends Component {
               </Text>
               <Text style={styles.navItemStyle} onPress={this.navigateToScreen('FloorPlan')}>
               Floor Plan
+              </Text>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('Feedback')}>
+              Feedback
               </Text>
             </View>
           </View>
