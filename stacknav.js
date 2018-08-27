@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
   Image,
-  Text,
   TouchableOpacity
 } from 'react-native';
 import { createStackNavigator,NavigationActions } from  'react-navigation';
@@ -12,8 +11,7 @@ import FloorPlanScreen from "./FloorPlanScreen";
 import CategoryScreen from "./CategoryScreen";
 import SearchScreen from "./SearchScreen";
 import ShopListScreen from './ShopListScreen';
-import ProfileScreen from './ProfileScreen';
-
+import FeedbackScreen from "./FeedbackScreen";
 
 const stackNav = createStackNavigator({
   Home : {
@@ -46,6 +44,12 @@ const stackNav = createStackNavigator({
       title: "Shop List",
     })
   }, 
+  Feedback: {
+    screen: FeedbackScreen,
+    navigationOptions: ({navigation}) => ({
+      title: "Feedback",
+    })
+  }, 
   Search: {
     screen: SearchScreen,
   },
@@ -55,12 +59,6 @@ const stackNav = createStackNavigator({
   ShopDetail: {
     screen: ShopDetailsScreen,
   },
-  User: {
-    screen: ProfileScreen,
-  },
-  //EditUser: {
-   // screen: EditUserScreen,
-  //},
 });
 
 export default stackNav;
