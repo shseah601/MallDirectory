@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
     Platform,
     View,
     Text,
     TextInput,
     TouchableNativeFeedback,
-    StyleSheet,
+    StyleSheet, 
 } from 'react-native';
 
 /**
@@ -112,7 +112,6 @@ const buttonStyles = StyleSheet.create({
         color: 'black',
     },
 });
-
 /**
  * Export modules
  */
