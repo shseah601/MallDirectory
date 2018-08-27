@@ -4,7 +4,9 @@ export default {
       flex: 1
     },
     navItemStyle: {
-      padding: 10
+      padding: 10,
+      color: 'black',
+      fontSize: 20
     },
     navSectionStyle: {
       backgroundColor: 'lightgrey'
