@@ -15,11 +15,6 @@ class ProfileScreen extends Component {
 
     static navigationOptions ={
         title: 'User Profile',
-        headerRight: (
-        <Button
-            onPress={() => this.props.navigation.navigate('EditUser')}
-            title="Edit"
-        />),
     };
 
     constructor(props){
@@ -62,6 +57,7 @@ class ProfileScreen extends Component {
     }
     
   render () {
+    let user = this.state.user;
     return (
         <View style={styles.container}>
             <ScrollView>
@@ -72,11 +68,34 @@ class ProfileScreen extends Component {
                 editable={false}
             />
             <InputWithLabel style={styles.output}
+                label={'Age'}
+                value={user ? user.age : ''}
+                orientation={'vertical'}
+                editable={false}
+            />
+            <InputWithLabel style={styles.output}
                 label={'Email'}
                 value={user ? user.email : ''}
                 orientation={'vertical'}
                 editable={false}
             />
+            <InputWithLabel style={styles.output}
+                label={'Phone Number'}
+                value={user ? user.phoneNo : ''}
+                orientation={'vertical'}
+                editable={false}
+            />
+            <InputWithLabel style={styles.output}
+                label={'Address'}
+                value={user ? user.address : ''}
+                orientation={'vertical'}
+                editable={false}
+                multiline={true}
+            />
+        <Button
+            onPress={() => this.props.navigation.navigate('EditUser')}
+            title="Edit"
+        />
             </ScrollView>
         </View>
     );
@@ -113,7 +132,12 @@ container: {
 }, sectionHeader :{
     fontSize: 25,
     marginLeft: 10
-},
+}, output: {
+    fontSize: 24,
+    color: '#000099',
+    marginTop: 10,
+    marginBottom: 10,
+  },
 });
 
 export default ProfileScreen;

@@ -13,6 +13,7 @@ import CategoryScreen from "./CategoryScreen";
 import SearchScreen from "./SearchScreen";
 import ShopListScreen from './ShopListScreen';
 import ProfileScreen from './ProfileScreen';
+import EditUserScreen from './EditUserScreen';
 
 
 const stackNav = createStackNavigator({
@@ -58,9 +59,12 @@ const stackNav = createStackNavigator({
   User: {
     screen: ProfileScreen,
   },
-  //EditUser: {
-   // screen: EditUserScreen,
-  //},
+  EditUser: {
+    screen: EditUserScreen,
+    navigationOptions: ({navigation}) => ({
+      title: "Edit User",
+    })
+  },
 });
 
 export default stackNav;
