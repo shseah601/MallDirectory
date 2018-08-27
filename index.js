@@ -4,6 +4,8 @@ import { createDrawerNavigator } from 'react-navigation';
 import SideMenu from './SideMenu/SideMenu'
 import stackNav from './stacknav';
 
+console.disableYellowBox = true;
+
 const drawernav = createDrawerNavigator({
   Item1: {
       screen: stackNav,
