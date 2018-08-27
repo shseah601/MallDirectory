@@ -36,7 +36,8 @@ class SearchScreen extends Component {
   }
 
   _load() {
-    let url = config.settings.serverPath + '/api/search/' + this.state.keyword;
+    urlback = (this.state.keyword ? '/api/search/' : '/api/shops') + this.state.keyword;
+    let url = config.settings.serverPath + urlback;
 
     this.setState({isFetching: true});
 
@@ -59,7 +60,7 @@ class SearchScreen extends Component {
   }
   render () {
     return (
-      <ScrollView style={styles.container}>
+      <View style={styles.container}>
         <FlatList
           data={this.state.shops}
           showsVerticalScrollIndicator={true}
@@ -83,7 +84,8 @@ class SearchScreen extends Component {
           }
           keyExtractor={(item) => {item.id.toString()}}
         />
-      </ScrollView>
+
+      </View>
     );
   }
 }

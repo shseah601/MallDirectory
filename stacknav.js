@@ -12,6 +12,8 @@ import FloorPlanScreen from "./FloorPlanScreen";
 import CategoryScreen from "./CategoryScreen";
 import SearchScreen from "./SearchScreen";
 import ShopListScreen from './ShopListScreen';
+import ProfileScreen from './ProfileScreen';
+
 
 const stackNav = createStackNavigator({
   Home : {
@@ -53,6 +55,12 @@ const stackNav = createStackNavigator({
   ShopDetail: {
     screen: ShopDetailsScreen,
   },
+  User: {
+    screen: ProfileScreen,
+  },
+  //EditUser: {
+   // screen: EditUserScreen,
+  //},
 });
 
 export default stackNav;

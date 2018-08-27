@@ -9,7 +9,6 @@ import {
     FlatList,
     TouchableHighlight
 } from 'react-native';
-import { AppButton } from './UI.js';
 
 let SQLite = require('react-native-sqlite-storage');
 
@@ -30,8 +29,8 @@ class HomeScreen extends Component {
         this._query = this._query.bind(this);
 
         this.db = SQLite.openDatabase({
-            name: 'categoriesdb',
-            createFromLocation: '~categoriesdb.sqlite'
+            name: 'db',
+            createFromLocation: '~db.sqlite'
         }, this.openDb, this.errorDb);
     }
 

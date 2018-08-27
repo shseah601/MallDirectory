@@ -59,7 +59,7 @@ class CategoryScreen extends Component {
   }
   render () {
     return (
-      <ScrollView style={styles.container}>
+      <View style={styles.container}>
         <FlatList
           data={this.state.shops}
           showsVerticalScrollIndicator={true}
@@ -83,7 +83,7 @@ class CategoryScreen extends Component {
           }
           keyExtractor={(item) => {item.id.toString()}}
         />
-      </ScrollView>
+      </View>
     );
   }
 }
