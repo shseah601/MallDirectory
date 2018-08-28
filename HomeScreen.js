@@ -67,12 +67,13 @@ class HomeScreen extends Component {
                 }}
             >
             </TextInput>
-            <Button style={styles.search}
-                title={'Search'}
+            <TouchableHighlight 
+                underlayColor={'#cccccc'}   
                 onPress={() => this.props.navigation.navigate("Search", {
                     keyword: this.state.keyword,
                 })}
-            />
+            ><Text style={styles.search}>Search</Text>
+            </TouchableHighlight>
         </View>
         <View>
             <Text style={styles.sectionHeader}>Categories</Text>
@@ -114,6 +115,12 @@ container: {
 }, search: {
     flex: 1,
     fontSize: 20,
+    textAlignVertical: 'center',
+    color: 'white',
+    backgroundColor: 'green',
+    borderColor: '#ccc',
+    padding: 10,
+    marginLeft: 10,
 },  input: {
     flex: 3,
     fontSize: 20,
